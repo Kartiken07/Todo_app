@@ -1,11 +1,13 @@
 .page {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 64px 20px;
+  padding: clamp(20px, 6vh, 64px) max(14px, env(safe-area-inset-right))
+    max(24px, env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .glow {
@@ -39,7 +41,7 @@
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 32px;
+  padding: clamp(22px, 5vw, 32px);
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
@@ -620,35 +622,227 @@ h1 {
   font-size: 0.83rem;
 }
 
-@media (max-width: 520px) {
-  .page {
-    padding: 28px 14px;
-  }
-
-  .card {
-    padding: 22px 18px;
-  }
-
-  h1 {
-    font-size: 1.4rem;
-  }
-
+@media (hover: none) {
   .actions button {
     opacity: 1;
     transform: none;
   }
+}
 
-  .composer input[type='time'] {
-    padding: 8px 6px;
-    font-size: 0.84rem;
+@media (max-width: 640px) {
+  .page {
+    padding: 24px 12px calc(20px + env(safe-area-inset-bottom));
+  }
+
+  .glow-one,
+  .glow-two {
+    opacity: 0.3;
+  }
+
+  .card {
+    padding: 20px 14px;
+    border-radius: 16px;
+  }
+
+  h1 {
+    font-size: clamp(1.3rem, 6vw, 1.55rem);
+  }
+
+  .date {
+    font-size: 0.8rem;
+  }
+
+  .header {
+    margin-bottom: 18px;
+    gap: 10px;
+  }
+
+  .ring {
+    width: 54px;
+    height: 54px;
+  }
+
+  .ring::before {
+    width: 42px;
+    height: 42px;
+  }
+
+  .ring span {
+    font-size: 0.7rem;
+  }
+
+  .composer {
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .composer-main {
+    gap: 8px;
+  }
+
+  .composer input[type='text'] {
+    padding: 13px 12px;
+    font-size: 16px;
+  }
+
+  .composer button {
+    padding: 0 16px;
+    font-size: 0.9rem;
   }
 
   .time-row {
-    gap: 8px;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+  }
+
+  .composer input[type='time'] {
+    font-size: 16px;
+    padding: 9px 8px;
   }
 
   .time-hint {
     display: none;
+  }
+
+  .tabs {
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+
+  .tab,
+  .plan-btn,
+  .clear {
+    padding: 9px 14px;
+    font-size: 0.82rem;
+  }
+
+  .plan-btn {
+    margin-left: 0;
+  }
+
+  .task {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .check {
+    margin-top: 1px;
+  }
+
+  .body {
+    flex: 1 1 auto;
+  }
+
+  .actions {
+    order: 1;
+    margin-left: auto;
+  }
+
+  .actions button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .time-badge {
+    order: 2;
+    margin-left: 30px;
+    align-self: center;
+    font-size: 0.72rem;
+    padding: 3px 8px;
+  }
+
+  .edit-form input {
+    font-size: 16px;
+  }
+
+  .edit-row {
+    gap: 8px;
+  }
+
+  .edit-actions button {
+    flex: 1;
+    padding: 11px 14px;
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 16px;
+    text-align: center;
+  }
+
+  .chart {
+    height: 112px;
+    gap: 5px;
+  }
+
+  .col {
+    gap: 6px;
+  }
+
+  .col .label {
+    font-size: 0.62rem;
+    letter-spacing: 0.03em;
+  }
+
+  .bar .val {
+    top: -14px;
+    font-size: 0.6rem;
+  }
+
+  .empty {
+    padding: 26px 8px;
+  }
+}
+
+@media (max-width: 380px) {
+  .page {
+    padding: 16px 10px calc(16px + env(safe-area-inset-bottom));
+  }
+
+  .card {
+    padding: 16px 12px;
+  }
+
+  .composer-main {
+    flex-wrap: wrap;
+  }
+
+  .composer input[type='text'] {
+    flex: 1 1 100%;
+  }
+
+  .composer button {
+    width: 100%;
+    padding: 13px;
+  }
+
+  .time-field {
+    flex: 1 1 calc(50% - 14px);
+    min-width: 0;
+  }
+
+  .time-field input {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+  }
+
+  .time-arrow {
+    display: none;
+  }
+
+  .plan-btn {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  .time-badge {
+    margin-left: 26px;
+    white-space: normal;
   }
 }
 
