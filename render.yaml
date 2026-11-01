@@ -6,9 +6,6 @@ services:
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /api/health
-    envVars:
-      - key: CORS_ORIGINS
-        sync: false
 
   - type: static_site
     name: todo-frontend
