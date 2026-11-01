@@ -1,3 +1,4 @@
+import os
 import re
 import sqlite3
 from contextlib import contextmanager
@@ -13,9 +14,16 @@ DB_PATH = Path(__file__).parent / "todos.db"
 
 app = FastAPI(title="Todo API")
 
+DEFAULT_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "https://todo-app-xnz8.onrender.com",
+]
+EXTRA_ORIGINS = [o.strip() for o in os.environ.get("CORS_ORIGINS", "").split(",") if o.strip()]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=list(dict.fromkeys(DEFAULT_ORIGINS + EXTRA_ORIGINS)),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
