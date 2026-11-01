@@ -1,0 +1,30 @@
+:root {
+  --bg: #070b18;
+  --card: rgba(20, 27, 48, 0.72);
+  --card-solid: #141b30;
+  --border: rgba(148, 163, 184, 0.14);
+  --text: #e8edf7;
+  --muted: #8b96ad;
+  --accent: #6ee7f9;
+  --accent-2: #818cf8;
+  --danger: #fb7185;
+  --radius: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}

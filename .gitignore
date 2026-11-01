@@ -1,0 +1,18 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+frontend/dist/
+
+# Database & logs
+backend/todos.db
+*.log
+nohup.out
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

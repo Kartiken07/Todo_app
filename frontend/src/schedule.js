@@ -1,0 +1,98 @@
+export const DAY_PLAN = [
+  {
+    text: 'Wake up, freshen up, light breakfast',
+    notes: 'Keep it simple, no phone scrolling',
+    start_time: '06:30',
+    end_time: '07:00',
+  },
+  {
+    text: 'DSA practice (2 hours)',
+    notes: '1-2 LeetCode problems. Easy → Medium. Review the pattern, not just the answer',
+    start_time: '07:00',
+    end_time: '09:00',
+  },
+  {
+    text: 'Break and proper breakfast',
+    notes: 'Walk around, stretch',
+    start_time: '09:00',
+    end_time: '09:30',
+  },
+  {
+    text: 'Core subjects (1 hour)',
+    notes: 'Rotate: OS, DBMS, Computer Networks, OOP',
+    start_time: '09:30',
+    end_time: '10:30',
+  },
+  {
+    text: 'System design basics or aptitude',
+    notes: 'Alternate days',
+    start_time: '10:30',
+    end_time: '11:30',
+  },
+  {
+    text: 'Resume projects and pipeline study',
+    notes: 'Know every project on your resume end to end: problem, tech stack, data flow, pipeline, challenges, and results. Practise explaining each in 2 minutes',
+    start_time: '11:30',
+    end_time: '12:30',
+  },
+  {
+    text: 'Lunch and rest',
+    notes: 'Short nap if needed, max 20 minutes',
+    start_time: '12:30',
+    end_time: '13:15',
+  },
+  {
+    text: 'Job applications and networking',
+    notes: 'LinkedIn referrals, career pages, off-campus portals',
+    start_time: '13:15',
+    end_time: '14:15',
+  },
+  {
+    text: 'Video editing for Instagram (1.5 hours)',
+    notes: 'Main editing block. Edit, add captions, export and schedule your reels',
+    start_time: '14:15',
+    end_time: '15:45',
+  },
+  {
+    text: 'Extension program learning',
+    notes: "Your company's learning programs",
+    start_time: '15:45',
+    end_time: '16:30',
+  },
+  {
+    text: 'Free time or light revision',
+    notes: "Tea, music, or quick revision of the day's notes",
+    start_time: '16:30',
+    end_time: '17:15',
+  },
+  {
+    text: 'Travel and get ready for gym',
+    notes: null,
+    start_time: '17:15',
+    end_time: '18:15',
+  },
+  {
+    text: 'Gym',
+    notes: 'Consistent routine, good for focus and energy',
+    start_time: '18:15',
+    end_time: '19:45',
+  },
+  {
+    text: 'Dinner and relax',
+    notes: null,
+    start_time: '19:45',
+    end_time: '20:30',
+  },
+  {
+    text: 'Mock interviews or revision',
+    notes: 'Aptitude, HR questions, or explain your projects aloud',
+    start_time: '20:30',
+    end_time: '21:30',
+  },
+  {
+    text: 'Plan tomorrow, log progress, wind down',
+    notes: 'Note what you solved and what to revisit. Lights out by 10 PM',
+    start_time: '21:30',
+    end_time: '22:00',
+  },
+]
